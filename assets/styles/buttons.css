@@ -1,0 +1,241 @@
+/* Variables */
+/* Mixins */
+/* Extend */
+a.btn,
+button,
+input[type=submit], .btn.primary, .btn.secondary, .btn.tertiary {
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  outline: none;
+  padding: 6px 10px 7px;
+  text-decoration: none;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+
+a.btn,
+button,
+input[type=submit] {
+  background: #e62ea8;
+  background: -webkit-linear-gradient(top, #eb5cbb, #c9188d);
+  background: linear-gradient(to bottom, #eb5cbb, #c9188d);
+  border: #9b136d 1px solid;
+  box-shadow: #f189ce 0 1px 0 inset;
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 0;
+}
+a.btn:hover,
+button:hover,
+input[type=submit]:hover {
+  background: #eb5cbb;
+  background: -webkit-linear-gradient(top, #f189ce, #e62ea8);
+  background: linear-gradient(to bottom, #f189ce, #e62ea8);
+  border: #c9188d 1px solid;
+  box-shadow: #f6b7e1 0 1px 0 inset;
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 0;
+}
+a.btn:active, a.btn.active,
+button:active,
+button.active,
+input[type=submit]:active,
+input[type=submit].active {
+  background: #c9188d;
+  background: -webkit-linear-gradient(top, #e62ea8, #9b136d);
+  background: linear-gradient(to bottom, #e62ea8, #9b136d);
+  border: #6e0d4d 1px solid;
+  box-shadow: #eb5cbb 0 1px 0 inset;
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 0;
+}
+a.btn.selected,
+button.selected,
+input[type=submit].selected {
+  background: #c9188d;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 1px 3px inset;
+  cursor: default;
+  text-shadow: rgba(0, 0, 0, 0.6) 0 1px 2px;
+}
+
+.btn.primary {
+  background: #e62ea8;
+  background: -webkit-linear-gradient(top, #eb5cbb, #c9188d);
+  background: linear-gradient(to bottom, #eb5cbb, #c9188d);
+  border: #9b136d 1px solid;
+  box-shadow: #f189ce 0 1px 0 inset;
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 0;
+}
+.btn.primary:hover {
+  background: #eb5cbb;
+  background: -webkit-linear-gradient(top, #f189ce, #e62ea8);
+  background: linear-gradient(to bottom, #f189ce, #e62ea8);
+  border: #c9188d 1px solid;
+  box-shadow: #f6b7e1 0 1px 0 inset;
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 0;
+}
+.btn.primary:active, .btn.primary.active {
+  background: #c9188d;
+  background: -webkit-linear-gradient(top, #e62ea8, #9b136d);
+  background: linear-gradient(to bottom, #e62ea8, #9b136d);
+  border: #6e0d4d 1px solid;
+  box-shadow: #eb5cbb 0 1px 0 inset;
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 0;
+}
+.btn.primary.selected {
+  background: #c9188d;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 1px 3px inset;
+  cursor: default;
+  text-shadow: rgba(0, 0, 0, 0.6) 0 1px 2px;
+}
+
+.btn.secondary {
+  background: #0099e5;
+  background: -webkit-linear-gradient(top, #19b3ff, #0077b2);
+  background: linear-gradient(to bottom, #19b3ff, #0077b2);
+  border: #00557f 1px solid;
+  box-shadow: #4cc4ff 0 1px 0 inset;
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 0;
+}
+.btn.secondary:hover {
+  background: #19b3ff;
+  background: -webkit-linear-gradient(top, #4cc4ff, #0099e5);
+  background: linear-gradient(to bottom, #4cc4ff, #0099e5);
+  border: #0077b2 1px solid;
+  box-shadow: #7fd5ff 0 1px 0 inset;
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 0;
+}
+.btn.secondary:active, .btn.secondary.active {
+  background: #0077b2;
+  background: -webkit-linear-gradient(top, #0099e5, #00557f);
+  background: linear-gradient(to bottom, #0099e5, #00557f);
+  border: #00334c 1px solid;
+  box-shadow: #19b3ff 0 1px 0 inset;
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 0;
+}
+.btn.secondary.selected {
+  background: #0077b2;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 1px 3px inset;
+  cursor: default;
+  text-shadow: rgba(0, 0, 0, 0.6) 0 1px 2px;
+}
+
+.btn.tertiary {
+  background: white;
+  background: -webkit-linear-gradient(top, white, #e6e6e6);
+  background: linear-gradient(to bottom, white, #e6e6e6);
+  border: #cccccc 1px solid;
+  box-shadow: white 0 1px 0 inset;
+  color: #555555;
+  text-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
+}
+.btn.tertiary:hover {
+  background: white;
+  background: -webkit-linear-gradient(top, white, #e6e6e6);
+  background: linear-gradient(to bottom, white, #e6e6e6);
+  border: #cccccc 1px solid;
+  box-shadow: white 0 1px 0 inset;
+  color: #555555;
+  text-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
+}
+.btn.tertiary:active, .btn.tertiary.active {
+  background: #e6e6e6;
+  background: -webkit-linear-gradient(top, white, #cccccc);
+  background: linear-gradient(to bottom, white, #cccccc);
+  border: #b3b3b3 1px solid;
+  box-shadow: white 0 1px 0 inset;
+  color: #555555;
+  text-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
+}
+.btn.tertiary.selected {
+  background: #e6e6e6;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 1px 3px inset;
+  cursor: default;
+  text-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
+}
+
+/* 20px */
+.btn.mini {
+  font-size: 10px;
+  line-height: 14px;
+  padding: 2px 6px;
+}
+
+/* 25px */
+.btn.small {
+  font-size: 12px;
+  line-height: 16px;
+  padding: 3px 8px 4px;
+}
+
+/* 30px */
+.btn.medium {
+  font-size: 14px;
+  line-height: 20px;
+  padding: 4px 10px;
+}
+
+/* 40px */
+.btn.large {
+  font-size: 16px;
+  line-height: 22px;
+  padding: 8px 20px;
+}
+
+.btn-group {
+  margin: 0 0 10px;
+}
+
+.btn-group > .btn {
+  margin: 0 5px 0 0;
+}
+
+.btn-bar {
+  margin: 0 0 10px;
+}
+
+.btn-bar > .btn {
+  float: left;
+  margin-left: -1px;
+  border-radius: 0;
+}
+
+.btn-bar > .btn:first-child {
+  border-radius: 4px 0 0 4px;
+  margin: 0;
+}
+
+.btn-bar > .btn:last-child {
+  border-radius: 0 4px 4px 0;
+}
+
+/* Clear floats */
+/* IE6 float clear */
+* html .btn-group,
+* html .btn-bar {
+  height: 1%;
+}
+
+/* IE7 float clear */
+*:first-child + html .btn-group,
+*:first-child + html .btn-bar {
+  min-height: 1px;
+}
+
+/* Browsers that support :after */
+.btn-group:after,
+.btn-bar:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}

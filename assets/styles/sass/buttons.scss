@@ -1,0 +1,172 @@
+/* Variables */
+$primary-color:#e62ea8; // Pink
+$secondary-color:#0099e5; // Blue
+$tertiary-color:#fff; // White
+
+/* Mixins */
+@mixin button($background, $color) {
+    background:$background;
+    background:-webkit-linear-gradient(top, lighten($background, 10%), darken($background, 10%));
+    background:linear-gradient(to bottom, lighten($background, 10%), darken($background, 10%));
+    border:darken($background, 20%) 1px solid;
+    box-shadow:lighten($background, 20%) 0 1px 0 inset;
+    color:$color;
+    @if lightness($color) < 50% {
+        text-shadow:rgba(255,255, 255,.8) 0 1px 0;
+    } @else {
+        text-shadow:rgba(0,0,0,.4) 0 -1px 0;
+    }
+}
+@mixin selected($background, $color) {
+    background:darken($background, 10%);
+    box-shadow:rgba(0,0,0,.4) 0 1px 3px inset;
+    cursor:default;
+     @if lightness($color) < 50% {
+        text-shadow:rgba(255,255, 255,.8) 0 1px 0;
+    } @else {
+        text-shadow:rgba(0,0,0,.6) 0 1px 2px;
+    }
+}
+
+/* Extend */
+%button {
+    border-radius:4px;
+    display:inline-block;
+    font-size:14px;
+    font-weight:bold;
+    line-height:20px;
+    outline:none;
+    padding:6px 10px 7px;
+    text-decoration:none;
+    -webkit-transition:all .25s ease-in-out;
+    transition:all .25s ease-in-out;
+}
+
+a.btn,
+button,
+input[type=submit] {
+    @include button($primary-color, #fff);
+    @extend %button;
+    &:hover {
+         @include button(lighten($primary-color, 10%), #fff);
+    }
+    &:active,
+    &.active {
+        @include button(darken($primary-color, 10%), #fff);
+    }
+    &.selected {
+        @include selected($primary-color, #fff);  
+    }
+}
+.btn.primary {
+    @include button($primary-color, #fff);
+    @extend %button;
+    &:hover {
+         @include button(lighten($primary-color, 10%), #fff);
+    }
+    &:active,
+    &.active {
+        @include button(darken($primary-color, 10%), #fff);
+    }
+    &.selected {
+        @include selected($primary-color, #fff);  
+    }
+}
+.btn.secondary {
+    @include button($secondary-color, #fff);
+    @extend %button;
+    &:hover {
+         @include button(lighten($secondary-color, 10%), #fff);
+    }
+    &:active,
+    &.active {
+        @include button(darken($secondary-color, 10%), #fff);
+    }
+    &.selected {
+        @include selected($secondary-color, #fff);  
+    }
+}
+.btn.tertiary {
+    @include button($tertiary-color, #555);
+    @extend %button;
+    &:hover {
+         @include button(lighten($tertiary-color, 10%), #555);
+    }
+    &:active,
+    &.active {
+        @include button(darken($tertiary-color, 10%), #555);
+    }
+    &.selected {
+        @include selected($tertiary-color, #555);  
+    }
+}
+
+/* 20px */
+.btn.mini {
+    font-size:10px;
+    line-height:14px;
+    padding:2px 6px;  
+}
+/* 25px */
+.btn.small {
+    font-size:12px;
+    line-height:16px;
+    padding:3px 8px 4px;  
+}
+/* 30px */
+.btn.medium {
+    font-size:14px;
+    line-height:20px;
+    padding:4px 10px;
+}
+/* 40px */
+.btn.large {
+    font-size:16px;
+    line-height:22px;
+    padding:8px 20px;
+}
+.btn-group {
+    margin:0 0 10px;
+}
+.btn-group > .btn {
+    margin:0 5px 0 0;
+}
+.btn-bar {
+    margin:0 0 10px;
+}
+.btn-bar > .btn {
+    float:left;
+    margin-left:-1px;
+    border-radius:0;
+}
+.btn-bar > .btn:first-child {
+    border-radius:4px 0 0 4px;
+    margin:0;
+}
+.btn-bar > .btn:last-child {
+    border-radius:0 4px 4px 0;
+}
+
+/* Clear floats */
+
+/* IE6 float clear */
+* html .btn-group,
+* html .btn-bar {
+    height:1%;
+}
+
+/* IE7 float clear */
+*:first-child + html .btn-group,
+*:first-child + html .btn-bar {
+    min-height:1px;
+}
+
+/* Browsers that support :after */
+.btn-group:after,
+.btn-bar:after {
+    clear:both;
+    content:".";
+    display:block;
+    height:0;
+    visibility:hidden;
+}
